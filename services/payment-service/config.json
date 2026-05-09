@@ -1,0 +1,13 @@
+{
+  "serviceName": "payment-service",
+  "port": 3002,
+  "paymentGateway": {
+    "provider": "stripe",
+    "apiVersion": "2023-10-16"
+  },
+  "currency": "USD",
+  "logging": {
+    "level": "info",
+    "format": "json"
+  }
+}

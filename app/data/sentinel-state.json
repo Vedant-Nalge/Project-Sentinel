@@ -1,0 +1,12 @@
+{
+  "services": [
+    { "id": 1, "name": "auth-service", "status": "HEALTHY", "lastCheck": "2026-05-09T10:00:00.000Z", "errorCount": 0 },
+    { "id": 2, "name": "payment-service", "status": "HEALTHY", "lastCheck": "2026-05-09T10:00:00.000Z", "errorCount": 0 },
+    { "id": 3, "name": "inventory-service", "status": "HEALTHY", "lastCheck": "2026-05-09T10:40:00.000Z", "errorCount": 0 },
+    { "id": 4, "name": "notification-service", "status": "HEALTHY", "lastCheck": "2026-05-09T10:00:00.000Z", "errorCount": 0 }
+  ],
+  "incidents": [
+    { "id": 1, "serviceId": 3, "severity": "critical", "description": "Chaos monkey injected bug in inventory-service", "createdAt": "2026-05-09T09:22:32.471Z", "resolvedAt": "2026-05-09T10:30:00.000Z", "fixCommit": "a1b2c3d" },
+    { "id": 2, "serviceId": 3, "severity": "critical", "description": "Chaos monkey injected corrupted JSON in inventory-service", "createdAt": "2026-05-09T09:31:02.684Z", "resolvedAt": "2026-05-09T10:40:00.000Z", "fixCommit": "fix-config-restore" }
+  ]
+}

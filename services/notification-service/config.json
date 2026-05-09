@@ -1,0 +1,13 @@
+{
+  "serviceName": "notification-service",
+  "port": 3004,
+  "providers": ["email", "sms", "push"],
+  "rateLimit": {
+    "maxPerMinute": 100,
+    "burst": 10
+  },
+  "logging": {
+    "level": "info",
+    "format": "json"
+  }
+}

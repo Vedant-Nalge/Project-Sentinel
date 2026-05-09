@@ -1,0 +1,13 @@
+{
+  "serviceName": "inventory-service",
+  "port": 3003,
+  "warehouse": {
+    "location": "US-EAST-1",
+    "capacity": 10000
+  },
+  "syncInterval": "5m",
+  "logging": {
+    "level": "info",
+    "format": "json"
+  }
+}

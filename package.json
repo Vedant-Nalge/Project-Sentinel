@@ -1,0 +1,17 @@
+{
+  "name": "project-sentinel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Autonomous Incident Resolution Engine",
+  "scripts": {
+    "dev": "cd app && npm run dev",
+    "build": "cd app && npm run build",
+    "chaos": "node scripts/chaos-monkey.js",
+    "status": "node scripts/check-status.js",
+    "postmortem": "node scripts/generate-postmortem.js"
+  },
+  "workspaces": [
+    "app",
+    "services/*"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "serviceName": "auth-service",
+  "port": 3001,
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "sentinel_auth"
+  },
+  "jwt": {
+    "expiry": "24h",
+    "algorithm": "HS256"
+  },
+  "logging": {
+    "level": "info",
+    "format": "json"
+  }
+}
