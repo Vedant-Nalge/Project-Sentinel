@@ -205,19 +205,55 @@ The dashboard uses a JSON-based "MCP" for status tracking:
 
 ## 💡 My Learnings
 
-### 1. AI is a Tool, Not a Replacement
-I learned that Claude Code isn't here to replace developers - it's here to amplify our capabilities. I still needed to understand the architecture and guide the AI, but the AI did 90% of the heavy lifting.
+### 1. Finding a Way When Premium AI Models Were Out of Reach
+When I first started this project, I quickly realized that Claude Code (the premium version of Claude with all features) wasn't something I could afford as a student. The subscription was way beyond my budget. At first, I felt stuck - how could I build an "AI-powered" project without the best AI tool?
 
-### 2. Prompt Engineering Matters
-The way you ask matters a lot. "Fix this bug" gives different results than "Enter Plan Mode, diagnose the root cause, fix it, write tests, and update the dashboard." Being specific helps the AI understand what you want.
+That's when I discovered **MiniMax** - a free AI model that I could use through Claude Code's configuration. It wasn't as powerful as Opus or Sonnet, but it got the job done. I learned that constraints can spark creativity. Instead of waiting for the "perfect" tool, I started building with what I had.
 
-### 3. Multi-Agent Orchestration is Powerful
+This taught me a valuable lesson: **Don't wait for ideal circumstances. Start with what you have and figure it out as you go.**
+
+### 2. Understanding Claude Code Workflow
+Before this project, I had used AI chatbots like ChatGPT and Gemini, but Claude Code was different. It's not just a chatbot you chat with - it's a CLI tool that lives in your terminal and works directly with your codebase.
+
+The workflow I discovered:
+- You give commands through the terminal (or verbally in my case for the demo)
+- Claude reads your files, understands the project structure
+- It can spawn "subagents" to handle different parts of a task
+- It can write, edit, and commit code
+- It follows rules you define in CLAUDE.md
+
+The key insight was: **Claude Code is a developer tool, not just a chatbot.** You don't just ask questions - you give it tasks to execute.
+
+### 3. Getting Acquainted with Claude Code
+The first few days were rough. I didn't know:
+- How to set up the project properly
+- What commands to use
+- How to make Claude follow my project's standards
+
+I spent time reading the documentation, exploring the commands, and most importantly - experimenting. I'd ask Claude to do something small, see how it responded, and gradually understood its capabilities.
+
+**Pro tip:** Create a CLAUDE.md file! It changed everything for me. I added:
+- Project architecture details
+- Naming conventions (TypeScript rules)
+- Resolution Protocol (how to fix bugs)
+- Commands reference
+
+Once Claude knew my "company standards," it wrote much better code that actually fit my project.
+
+### 4. Multi-Agent Orchestration is Powerful
 Breaking down tasks into subagents (Alpha for debugging, Beta for QA) makes the process more organized. It's like having a real DevOps team.
 
-### 4. Documentation is Key
+In my project, when a service went CRITICAL:
+- Main Agent coordinated the response
+- Subagent Alpha (Debugger) found and fixed the bug
+- Subagent Beta (QA) wrote regression tests
+
+This wasn't just cool - it was how real software teams work!
+
+### 5. Documentation is Key
 The CLAUDE.md file was crucial. It acted as the "company standards" that the AI followed. Without it, the code quality would have been inconsistent.
 
-### 5. Automation Feels Amazing
+### 6. Automation Feels Amazing
 When I committed fixes to GitHub automatically - that was the "aha!" moment. The AI didn't just fix code, it completed the entire workflow.
 
 ---
