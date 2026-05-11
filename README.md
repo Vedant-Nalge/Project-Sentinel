@@ -210,7 +210,6 @@ When I first started this project, I quickly realized that Claude Code (the prem
 
 That's when I discovered **MiniMax** - a free AI model that I could use through Claude Code's configuration. It wasn't as powerful as Opus or Sonnet, but it got the job done. I learned that constraints can spark creativity. Instead of waiting for the "perfect" tool, I started building with what I had.
 
-This taught me a valuable lesson: **Don't wait for ideal circumstances. Start with what you have and figure it out as you go.**
 
 ### 2. Understanding Claude Code Workflow
 Before this project, I had used AI chatbots like ChatGPT and Gemini, but Claude Code was different. It's not just a chatbot you chat with - it's a CLI tool that lives in your terminal and works directly with your codebase.
@@ -222,7 +221,6 @@ The workflow I discovered:
 - It can write, edit, and commit code
 - It follows rules you define in CLAUDE.md
 
-The key insight was: **Claude Code is a developer tool, not just a chatbot.** You don't just ask questions - you give it tasks to execute.
 
 ### 3. Getting Acquainted with Claude Code
 The first few days were rough. I didn't know:
@@ -284,13 +282,4 @@ When I committed fixes to GitHub automatically - that was the "aha!" moment. The
 **Issue:** After fixing, the dashboard still showed CRITICAL because it was reading static mock data.
 
 **Solution:** Created an API route (`/api/status`) that reads from the JSON state file, and made the dashboard poll it every 3 seconds.
-
----
-
-## Key Takeaways
-
-- This project changed how I think about coding
-- AI agents are teammates, not replacements
-- The more you guide, the better the results
-- Don't be afraid to iterate - nothing worked perfectly first try
 
