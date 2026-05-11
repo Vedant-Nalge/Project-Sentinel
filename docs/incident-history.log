@@ -26,3 +26,5 @@
 [2026-05-09T09:22:32.468Z] CHAOS: inventory-service - missing_dependency - Removed dependency: express
 [2026-05-09T09:31:02.681Z] CHAOS: inventory-service - corrupted_json - Corrupted JSON: config.json
 [2026-05-09T10:40:00.000Z] inventory-service - corrupted_json - RESOLVED: restored config.json, regression tests passed
+[2026-05-11T10:59:56.958Z] CHAOS: payment-service - missing_dependency - Removed dependency: express
+[2026-05-11T11:05:00.000Z] payment-service - missing_dependency - RESOLVED: restored express dependency, regression tests passed
