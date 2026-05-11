@@ -2,11 +2,11 @@
 
 An AI-powered DevOps monitoring dashboard that connects to a mock production environment, detects failures, and spawns Claude subagents to autonomously write, test, and commit fixes.
 
-## 🎯 The Goal
+## The Goal
 
 Build a dashboard that demonstrates the "Mastery" of Claude Code - leading AI agents to autonomously fix production issues without human intervention.
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 /
@@ -31,7 +31,7 @@ Build a dashboard that demonstrates the "Mastery" of Claude Code - leading AI ag
 └── package.json          # Workspace root
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Install dependencies
 ```bash
@@ -62,7 +62,7 @@ npm run postmortem
 # Shows incident analysis
 ```
 
-## 🎮 The Autonomous Resolution Workflow
+##  The Autonomous Resolution Workflow
 
 ### Step 1: Chaos Monkey injects a bug
 ```bash
@@ -89,7 +89,7 @@ git commit -m "fix: resolve type mismatch in auth-service"
 ### Step 6: Dashboard shows RESOLVED
 The incident is marked as resolved with the fix commit hash.
 
-## 📋 Resolution Protocol
+##  Resolution Protocol
 
 Before applying ANY fix, Claude MUST:
 
@@ -108,13 +108,13 @@ Before applying ANY fix, Claude MUST:
    - Run `npm test`
    - Log resolution in incident-history.log
 
-## 🔧 MCP Integration
+##  MCP Integration
 
 The dashboard uses a JSON-based "MCP" for status tracking:
 - Database: `/app/data/sentinel-state.json`
 - Tables: services, incidents, resolutions
 
-## 🤖 Multi-Agent Orchestration
+##  Multi-Agent Orchestration
 
 | Agent | Role |
 |-------|------|
@@ -122,14 +122,14 @@ The dashboard uses a JSON-based "MCP" for status tracking:
 | Subagent Alpha | Debugger - traces errors, proposes fixes |
 | Subagent Beta | QA - writes regression tests |
 
-## 📊 Dashboard Features
+##  Dashboard Features
 
 - **System Health**: Percentage of healthy services
 - **Active Incidents**: Currently failing services
 - **Resolved by Claude**: Fixes committed autonomously
 - **Service Status**: Real-time health of each microservice
 
-## 🎬 Demo
+##  Demo
 
 1. Run `npm run chaos` to inject a bug
 2. Use the dashboard to see the incident
@@ -137,7 +137,7 @@ The dashboard uses a JSON-based "MCP" for status tracking:
 4. Watch autonomous resolution in action
 5. Run `npm run postmortem` for analysis
 
-## 📦 Submission
+##  Submission
 
 1. **GitHub Repo**: Contains all code + CLAUDE.md
 2. **Agent Logs**: `docs/incident-history.log` - shows complex resolution session
@@ -203,7 +203,7 @@ The dashboard uses a JSON-based "MCP" for status tracking:
 
 ---
 
-## 💡 My Learnings
+##  My Learnings
 
 ### 1. Finding a Way When Premium AI Models Were Out of Reach
 When I first started this project, I quickly realized that Claude Code (the premium version of Claude with all features) wasn't something I could afford as a student. The subscription was way beyond my budget. At first, I felt stuck - how could I build an "AI-powered" project without the best AI tool?
@@ -258,7 +258,7 @@ When I committed fixes to GitHub automatically - that was the "aha!" moment. The
 
 ---
 
-## 🚧 Problems I Faced (and How I Solved Them)
+## Problems I Faced (and How I Solved Them)
 
 ### Problem 1: better-sqlite3 wouldn't install
 **Issue:** Native module compilation failed because I didn't have Visual Studio installed.
@@ -287,13 +287,10 @@ When I committed fixes to GitHub automatically - that was the "aha!" moment. The
 
 ---
 
-## 🎯 Key Takeaways
+## Key Takeaways
 
 - This project changed how I think about coding
 - AI agents are teammates, not replacements
 - The more you guide, the better the results
 - Don't be afraid to iterate - nothing worked perfectly first try
 
----
-
-**Remember**: Manual coding is considered a "failure" in this project. The goal is to demonstrate your ability to *lead* AI, not to *be* the AI.
