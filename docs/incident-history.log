@@ -32,3 +32,5 @@
 [2026-05-11T11:30:00.000Z] auth-service - syntax_error - RESOLVED: fixed 'conts' to 'const', regression tests passed
 [2026-05-11T11:41:48.336Z] CHAOS: notification-service - syntax_error - Injected syntax error: src/index.ts (const  -> conts )
 [2026-05-11T11:45:00.000Z] notification-service - syntax_error - RESOLVED: fixed 'conts' to 'const', regression tests passed
+[2026-05-11T11:51:03.668Z] CHAOS: notification-service - missing_dependency - Removed dependency: cors
+[2026-05-11T11:55:00.000Z] notification-service - missing_dependency - RESOLVED: restored cors dependency, regression tests passed
