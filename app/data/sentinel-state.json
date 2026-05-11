@@ -3,12 +3,13 @@
     { "id": 1, "name": "auth-service", "status": "HEALTHY", "lastCheck": "2026-05-11T11:30:00.000Z", "errorCount": 0 },
     { "id": 2, "name": "payment-service", "status": "HEALTHY", "lastCheck": "2026-05-11T11:05:00.000Z", "errorCount": 0 },
     { "id": 3, "name": "inventory-service", "status": "HEALTHY", "lastCheck": "2026-05-09T10:40:00.000Z", "errorCount": 0 },
-    { "id": 4, "name": "notification-service", "status": "HEALTHY", "lastCheck": "2026-05-09T10:00:00.000Z", "errorCount": 0 }
+    { "id": 4, "name": "notification-service", "status": "HEALTHY", "lastCheck": "2026-05-11T11:45:00.000Z", "errorCount": 0 }
   ],
   "incidents": [
     { "id": 1, "serviceId": 3, "severity": "critical", "description": "Chaos monkey injected bug in inventory-service", "createdAt": "2026-05-09T09:22:32.471Z", "resolvedAt": "2026-05-09T10:30:00.000Z", "fixCommit": "a1b2c3d" },
     { "id": 2, "serviceId": 3, "severity": "critical", "description": "Chaos monkey injected corrupted JSON in inventory-service", "createdAt": "2026-05-09T09:31:02.684Z", "resolvedAt": "2026-05-09T10:40:00.000Z", "fixCommit": "fix-config-restore" },
     { "id": 3, "serviceId": 2, "severity": "critical", "description": "Chaos monkey removed express dependency from payment-service", "createdAt": "2026-05-11T10:59:56.961Z", "resolvedAt": "2026-05-11T11:05:00.000Z", "fixCommit": "fix-express-dependency" },
-    { "id": 4, "serviceId": 1, "severity": "critical", "description": "Chaos monkey injected syntax error in auth-service", "createdAt": "2026-05-11T11:26:16.728Z", "resolvedAt": "2026-05-11T11:30:00.000Z", "fixCommit": "fix-syntax-const" }
+    { "id": 4, "serviceId": 1, "severity": "critical", "description": "Chaos monkey injected syntax error in auth-service", "createdAt": "2026-05-11T11:26:16.728Z", "resolvedAt": "2026-05-11T11:30:00.000Z", "fixCommit": "fix-syntax-const" },
+    { "id": 5, "serviceId": 4, "severity": "critical", "description": "Chaos monkey injected syntax error in notification-service", "createdAt": "2026-05-11T11:41:48.340Z", "resolvedAt": "2026-05-11T11:45:00.000Z", "fixCommit": "fix-notification-syntax" }
   ]
 }
