@@ -148,4 +148,116 @@ The dashboard uses a JSON-based "MCP" for status tracking:
 
 ---
 
+## 🛠️ How to Run This Project
+
+### Prerequisites
+- Node.js installed
+- Git installed
+- A GitHub account
+
+### Step-by-Step Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Vedant-Nalge/Project-Sentinel.git
+   cd Project-Sentinel
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the dashboard** (Terminal 1)
+   ```bash
+   npm run dev
+   ```
+   Open http://localhost:3000 in your browser
+
+4. **Inject a bug** (Terminal 2)
+   ```bash
+   node scripts/chaos-monkey.js
+   ```
+
+5. **Tell Claude to fix it**
+   Just say: "Enter Plan Mode, then diagnose and fix the broken service"
+
+6. **Watch the magic** - Claude will:
+   - Find the bug
+   - Fix the code
+   - Write regression tests
+   - Update the dashboard
+   - Commit to GitHub
+
+### Running the Demo for Video
+
+1. Reset everything first: `node scripts/update-state.js`
+2. Start dashboard: `npm run dev`
+3. Verify all services show HEALTHY
+4. Run Chaos Monkey: `node scripts/chaos-monkey.js`
+5. Refresh dashboard - one service will show CRITICAL
+6. Say to Claude: "Enter Plan Mode, then diagnose and fix the broken service"
+7. Watch Claude fix it (don't touch keyboard!)
+8. Show the dashboard - now all HEALTHY
+9. Push to GitHub: `git push origin main`
+
+---
+
+## 💡 My Learnings
+
+### 1. AI is a Tool, Not a Replacement
+I learned that Claude Code isn't here to replace developers - it's here to amplify our capabilities. I still needed to understand the architecture and guide the AI, but the AI did 90% of the heavy lifting.
+
+### 2. Prompt Engineering Matters
+The way you ask matters a lot. "Fix this bug" gives different results than "Enter Plan Mode, diagnose the root cause, fix it, write tests, and update the dashboard." Being specific helps the AI understand what you want.
+
+### 3. Multi-Agent Orchestration is Powerful
+Breaking down tasks into subagents (Alpha for debugging, Beta for QA) makes the process more organized. It's like having a real DevOps team.
+
+### 4. Documentation is Key
+The CLAUDE.md file was crucial. It acted as the "company standards" that the AI followed. Without it, the code quality would have been inconsistent.
+
+### 5. Automation Feels Amazing
+When I committed fixes to GitHub automatically - that was the "aha!" moment. The AI didn't just fix code, it completed the entire workflow.
+
+---
+
+## 🚧 Problems I Faced (and How I Solved Them)
+
+### Problem 1: better-sqlite3 wouldn't install
+**Issue:** Native module compilation failed because I didn't have Visual Studio installed.
+
+**Solution:** Switched to a JSON-file based state management instead. Simple but worked perfectly.
+
+### Problem 2: Hydration Errors in Next.js
+**Issue:** Dashboard showed "Text content does not match server-rendered HTML" error because timestamps rendered differently on server vs client.
+
+**Solution:** Used string manipulation instead of `toLocaleTimeString()` - extracted time from ISO string directly.
+
+### Problem 3: Services Showed as "UNKNOWN"
+**Issue:** The status checker tried to connect to actual HTTP endpoints, but the services weren't running.
+
+**Solution:** The "mock" approach works by modifying actual code files. When code has bugs, it's "down" - when fixed, it's "up." The state file tracks this.
+
+### Problem 4: GitHub Push Failed Initially
+**Issue:** First push failed because I created the repo on GitHub first without initializing locally.
+
+**Solution:** Added the remote: `git remote add origin https://github.com/Vedant-Nalge/Project-Sentinel.git`
+
+### Problem 5: Dashboard Didn't Update Automatically
+**Issue:** After fixing, the dashboard still showed CRITICAL because it was reading static mock data.
+
+**Solution:** Created an API route (`/api/status`) that reads from the JSON state file, and made the dashboard poll it every 3 seconds.
+
+---
+
+## 🎯 Key Takeaways
+
+- This project changed how I think about coding
+- AI agents are teammates, not replacements
+- The more you guide, the better the results
+- Don't be afraid to iterate - nothing worked perfectly first try
+
+---
+
 **Remember**: Manual coding is considered a "failure" in this project. The goal is to demonstrate your ability to *lead* AI, not to *be* the AI.
